@@ -34,7 +34,7 @@ function validateInput() {
     hideAllHints();
     // I have spent a long time looking and trying out various URL-Validation regular expressions for JS
     //but since none of them really do the job hundred percent well, I thought I may as well use the simple built-in validation
-    let inputIsValid = input && input.checkValidity();
+    let inputIsValid = input.value && input.checkValidity();
     if (!inputIsValid) {
       let hint = document.getElementById("hint");
       showHint(hint);
@@ -53,7 +53,7 @@ function runExistenceCheck() {
   xhttp.onreadystatechange = function () {
     // Source of the regular expression: https://stackoverflow.com/questions/57960849/regex-to-match-a-url-with-no-file-extension
     const folderRegex = new RegExp(/(?:\/|^)[^.\/]+$/);
-    let inputIsValid = input && input.checkValidity();
+    let inputIsValid = input.value && input.checkValidity();
     // Running the existence check only if input is valid
     if (inputIsValid) {
       hideAllHints();
