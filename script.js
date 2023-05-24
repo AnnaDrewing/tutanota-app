@@ -69,7 +69,7 @@ function runExistenceCheck() {
     }
   };
   console.log(url);
-  xhttp.open("GET", "https://developer.mozilla.org", true);
+  xhttp.open("GET", url, true);
   console.log("status code is: " + xhttp.status);
   xhttp.send();
 }
