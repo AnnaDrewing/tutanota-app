@@ -40,8 +40,8 @@ function validateInput() {
       showHint(hint);
     }
   };
-  xhttp.open("GET", "https://localhost:3000/", true);
-  xhttp.send();
+  // xhttp.open("GET", "https://localhost:3000/", true);
+  // xhttp.send();
 }
 
 /**
@@ -66,8 +66,8 @@ function runExistenceCheck() {
       }
     }
   };
-  xhttp.open("GET", "https://localhost:3000/", true);
-  xhttp.send();
+  // xhttp.open("GET", "https://localhost:3000/", true);
+  // xhttp.send();
 }
 
 function showHint(hint) {
