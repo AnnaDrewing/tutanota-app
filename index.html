@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <form>
+            <label for="url">Check the URL: </label>
+            <input type="url" name="url" id="url" placeholder="Type your URL here">
+        </form>
+        <div id="hint" class="hint">
+            <img class="hint-image" src="./images/coyote-help.jpg" alt="Wile E. Coyote running off the cliff ">
+            <p>Looks like you could use some help! Valid URL format, according to MDN, is: urlscheme://restofurl</p>
+        </div>
+        <div id="file" class="hint">
+            <img class="hint-image" src="./images/file-vs-folder.png" alt="Files vs Folder">
+            <p>It looks like you've got an URL leading to a file (or you have typed a URL that only contains the domain name)
+            </p>
+        </div>
+        <div id="folder" class="hint">
+            <img class="hint-image" src="./images/file-vs-folder.png" alt="Files vs Folder">
+            <p>It looks like you've got an URL leading to a folder. Folder is here seen as a URL with no file extension at the end</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script> 
+</body>
+</html>
