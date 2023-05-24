@@ -40,8 +40,9 @@ function validateInput() {
       showHint(hint);
     }
   };
-  // xhttp.open("GET", "https://localhost:3000/", true);
-  // xhttp.send();
+  let url = input.value;
+  xhttp.open("GET", "url", true);
+  xhttp.send();
 }
 
 /**
@@ -50,6 +51,7 @@ function validateInput() {
 function runExistenceCheck() {
   console.log("Running existence check!");
   var xhttp = new XMLHttpRequest();
+  let url = input.value;
   xhttp.onreadystatechange = function () {
     // Source of the regular expression: https://stackoverflow.com/questions/57960849/regex-to-match-a-url-with-no-file-extension
     const folderRegex = new RegExp(/(?:\/|^)[^.\/]+$/);
@@ -66,8 +68,10 @@ function runExistenceCheck() {
       }
     }
   };
-  // xhttp.open("GET", "https://localhost:3000/", true);
-  // xhttp.send();
+  console.log(url);
+  xhttp.open("GET", "url", true);
+  console.log("status code is: " + xhttp.status);
+  xhttp.send();
 }
 
 function showHint(hint) {
