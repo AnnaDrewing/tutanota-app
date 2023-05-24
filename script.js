@@ -41,7 +41,7 @@ function validateInput() {
     }
   };
   let url = input.value;
-  xhttp.open("GET", "url", true);
+  xhttp.open("GET", url, true);
   xhttp.send();
 }
 
@@ -69,7 +69,7 @@ function runExistenceCheck() {
     }
   };
   console.log(url);
-  xhttp.open("GET", "url", true);
+  xhttp.open("GET", url, true);
   console.log("status code is: " + xhttp.status);
   xhttp.send();
 }
