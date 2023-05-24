@@ -1,5 +1,4 @@
 let input = document.querySelector("#url");
-let form = document.querySelector("form");
 
 // Validating occurs as the user is typing
 input.addEventListener("input", validateInput);
@@ -12,7 +11,6 @@ input.addEventListener("change", runExistenceCheck);
  * According to MDN docs: "A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means urlscheme://restofurl"
  */
 function validateInput() {
-  console.log("Validating input!");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     let hint = document.getElementById("hint");
@@ -33,16 +31,15 @@ function validateInput() {
  * Checks whether the given URL leads to a file or a folder
  */
 function runExistenceCheck() {
-  console.log("Existence check triggered!");
-  // Source of the regular expression: https://stackoverflow.com/questions/57960849/regex-to-match-a-url-with-no-file-extension
-  const folderRegex = new RegExp(/(?:\/|^)[^.\/]+$/);
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    let folderInfo = document.getElementById("folder");
-    let fileInfo = document.getElementById("file");
+    // Source of the regular expression: https://stackoverflow.com/questions/57960849/regex-to-match-a-url-with-no-file-extension
+    const folderRegex = new RegExp(/(?:\/|^)[^.\/]+$/);
     let inputIsValid = input && input.checkValidity();
     // Running the existence check only if input is valid
     if (inputIsValid) {
+      let folderInfo = document.getElementById("folder");
+      let fileInfo = document.getElementById("file");
       if (folderRegex.test(input.value)) {
         fileInfo.style.display = "none";
         folderInfo.style.display = "block";
