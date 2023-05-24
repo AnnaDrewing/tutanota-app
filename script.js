@@ -70,7 +70,6 @@ function runExistenceCheck() {
   };
   console.log(url);
   xhttp.open("GET", url, true);
-  console.log("status code is: " + xhttp.status);
   xhttp.send();
 }
 
