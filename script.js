@@ -32,8 +32,6 @@ function validateInput() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     hideAllHints();
-    // I have spent a long time looking and trying out various URL-Validation regular expressions for JS
-    //but since none of them really do the job hundred percent well, I thought I may as well use the simple built-in validation
     let inputIsValid = input.value && input.checkValidity();
     if (!inputIsValid) {
       let hint = document.getElementById("hint");
@@ -49,7 +47,6 @@ function validateInput() {
  * Checks whether the given URL leads to a file or a folder
  */
 function runExistenceCheck() {
-  console.log("Running existence check!");
   var xhttp = new XMLHttpRequest();
   let url = input.value;
   xhttp.onreadystatechange = function () {
@@ -68,7 +65,6 @@ function runExistenceCheck() {
       }
     }
   };
-  console.log(url);
   xhttp.open("GET", url, true);
   xhttp.send();
 }

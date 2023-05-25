@@ -30,9 +30,9 @@ form {
     margin: 2em auto;
     display: flex;
     flex-direction: column;
-    font-weight: 100;
-    text-align: center;
     display: none;
+    text-align: center;
+    font-weight: 100;
 }
 
 .hint-image {
