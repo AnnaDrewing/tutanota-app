@@ -39,8 +39,12 @@ function validateInput() {
     }
   };
   let url = input.value;
-  xhttp.open("GET", url, true);
-  xhttp.send();
+  try {
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  } catch (error) {
+    console.error("Ooops, we've got a problem! " + error);
+  }
 }
 
 /**
@@ -65,8 +69,12 @@ function runExistenceCheck() {
       }
     }
   };
-  xhttp.open("GET", url, true);
-  xhttp.send();
+  try {
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  } catch (error) {
+    console.error("Ooops, we've got a problem! " + error);
+  }
 }
 
 function showHint(hint) {
