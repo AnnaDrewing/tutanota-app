@@ -59,6 +59,7 @@ async function runExistenceCheck() {
     const serverCallResult = await mockServerResponse(url);
     // Check if folder or file
     if (serverCallResult === 200) {
+      console.log("Your server call was successful! Rejoice!");
       if (folderRegex.test(input.value)) {
         let folderInfo = document.getElementById("folder");
         showHint(folderInfo);
