@@ -13,7 +13,7 @@
             <label for="url">Check the URL: </label>
             <input type="url" name="url" id="url" placeholder="Type your URL here">
         </form>
-        <div id="hint" class="hint">
+        <div id="url-hint" class="hint">
             <img class="hint-image" src="./images/coyote-help.jpg" alt="Wile E. Coyote running off the cliff ">
             <p>Looks like you could use some help! Valid URL format, according to MDN, is: urlscheme://restofurl</p>
         </div>
@@ -25,6 +25,10 @@
         <div id="folder" class="hint">
             <img class="hint-image" src="./images/file-vs-folder.png" alt="Files vs Folder">
             <p>It looks like you've got an URL leading to a folder. Folder is here seen as a URL with no file extension at the end</p>
+        </div>
+        <div id="server" class="hint">
+            <img class="hint-image" src="./images/nope-panda.jpg" alt="Nope Panda">
+            <p>It looks like the server has a day off today. Please try a better, existing URL, or go read a book.</p>
         </div>
     </div>
     <script type="text/javascript" src="script.js"></script> 
